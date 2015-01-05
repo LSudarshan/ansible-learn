@@ -1,0 +1,5 @@
+- name: download spark
+  get_url: url=http://d3kbcqa49mib13.cloudfront.net/spark-1.2.0-bin-hadoop2.4.tgz dest=/tmp/ force=no
+
+- name: unzip spark
+  unarchive: copy=no src=/tmp/spark-1.2.0-bin-hadoop2.4.tgz  dest=/opt creates=/opt/spark-1.2.0-bin-hadoop2.4/
