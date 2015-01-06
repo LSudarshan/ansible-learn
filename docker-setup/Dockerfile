@@ -8,3 +8,4 @@ RUN apt-get update
 RUN apt-get install -y ansible
 WORKDIR /work
 RUN ansible-playbook -i "localhost," -c local site.yml
+CMD sudo /opt/spark-1.2.0-bin-hadoop2.4/sbin/start-master.sh
